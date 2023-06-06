@@ -1,12 +1,23 @@
+//import Header from "./components/Header";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Menu from "./components/Menu";
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
-  return <></>;
+  return (
+    <div className="h-[100%]">
+      <Header setShowMenu={setShowMenu} showMenu={showMenu} />
+      {showMenu ? <Menu setShowMenu={setShowMenu} /> : null}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;

@@ -1,13 +1,31 @@
 import { Link } from "react-router-dom";
 import Close from "../svg/Close";
 
-function Menu(props: { setShowMenu: (bool: boolean) => void }) {
+function Menu(props: {
+  setShowMenu: (bool: boolean) => void;
+  setDestinationData: React.Dispatch<
+    React.SetStateAction<
+      | {
+          description: string;
+          distance: string;
+          images: {
+            png: string;
+            webp: string;
+          };
+          name: string;
+          travel: string;
+          _id: string;
+        }[]
+      | null
+    >
+  >;
+}) {
   return (
-    <div className="absolute top-0 right-0 w-[254px] h-[100vh] pl-[32px] pr-[26px] py-[33px] bg-white/[0.04] backdrop-blur-2xl">
+    <div className="absolute top-0 right-0 w-[254px] h-[100vh] pl-[32px] pr-[26px] py-[33px] bg-white/[0.04] backdrop-blur-2xl ">
       <div>
         <Close onClick={() => props.setShowMenu(false)} />
       </div>
-      <nav className="flex flex-col   text-white">
+      <nav className="flex flex-col  gap-[32px] text-white mt-[64px] font-barlow font-normal text-base/[19px] tracking-[2.7px]">
         <Link to={"/home"}>
           <button>00 HOME</button>
         </Link>

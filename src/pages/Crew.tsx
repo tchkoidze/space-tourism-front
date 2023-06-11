@@ -16,7 +16,9 @@ function Crew() {
 
   useEffect(() => {
     const getCrewData = async () => {
-      const response = await axios.get("http://localhost:3333/api/crew");
+      const response = await axios.get(
+        "https://space-tours.herokuapp.com/api/crew"
+      );
       setCrew(response.data);
       console.log(response.data);
 

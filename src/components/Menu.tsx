@@ -26,7 +26,7 @@ function Menu(props: {
         <Close onClick={() => props.setShowMenu(false)} />
       </div>
       <nav className="flex flex-col  gap-[32px] text-white mt-[64px] font-barlow font-normal text-base/[19px] tracking-[2.7px]">
-        <Link to={"/home"}>
+        <Link to={"/"}>
           <button>00 HOME</button>
         </Link>
         <Link to={"/destination"}>

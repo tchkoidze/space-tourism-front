@@ -10,7 +10,7 @@ import Technology from "./pages/Technology";
 
 function App() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  const [destinationData, setDestinationData] = useState<
+  /*const [destinationData, setDestinationData] = useState<
     | {
         description: string;
         distance: string;
@@ -20,17 +20,12 @@ function App() {
         _id: string;
       }[]
     | null
-  >(null);
+  >(null);*/
 
   return (
     <div className="h-[100%]">
       <Header setShowMenu={setShowMenu} showMenu={showMenu} />
-      {showMenu ? (
-        <Menu
-          setShowMenu={setShowMenu}
-          setDestinationData={setDestinationData}
-        />
-      ) : null}
+      {showMenu ? <Menu setShowMenu={setShowMenu} /> : null}
 
       <Routes>
         <Route path="/home" element={<Home />} />
@@ -44,3 +39,5 @@ function App() {
 }
 
 export default App;
+
+/*setDestinationData={setDestinationData}*/

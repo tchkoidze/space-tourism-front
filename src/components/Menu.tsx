@@ -3,7 +3,7 @@ import Close from "../svg/Close";
 
 function Menu(props: {
   setShowMenu: (bool: boolean) => void;
-  setDestinationData: React.Dispatch<
+  /*setDestinationData: React.Dispatch<
     React.SetStateAction<
       | {
           description: string;
@@ -18,7 +18,7 @@ function Menu(props: {
         }[]
       | null
     >
-  >;
+  >;*/
 }) {
   return (
     <div className="absolute top-0 right-0 w-[254px] h-[100vh] pl-[32px] pr-[26px] py-[33px] bg-white/[0.04] backdrop-blur-2xl ">

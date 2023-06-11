@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
 
 const BACK_URL = import.meta.env.VITE_BACK_URL;
 

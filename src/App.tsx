@@ -28,7 +28,7 @@ function App() {
       {showMenu ? <Menu setShowMenu={setShowMenu} /> : null}
 
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
 
         <Route path="/destination" element={<Destination />} />
         <Route path="/crew" element={<Crew />} />

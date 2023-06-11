@@ -1,8 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-/*const BACK_URL = import.meta.env.VITE_BACK_URL;*/
-
 interface Technology {
   _id?: string;
   name: string;

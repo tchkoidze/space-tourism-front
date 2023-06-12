@@ -37,7 +37,7 @@ function Destination() {
   console.log(destination);
   //console.log(destination?.images.webp);
   return (
-    <div className="flex flex-col items-center h-[100%] bg-[url('./assets/destination/background-destination-mobile.jpg')] bg-no-repeat bg-cover text-white px-[24px] md:bg-[url('./assets/destination/background-destination-tablet.jpg')] md:px-[39px] lg:px-0 lg:bg-[url('./assets/destination/background-destination-desktop.jpg')]">
+    <div className="flex flex-col items-center h-[100%] bg-[url('./assets/destination/background-destination-mobile.jpg')] bg-no-repeat bg-cover text-white px-[24px] md:bg-[url('./assets/destination/background-destination-tablet.jpg')] md:px-[39px] lg:px-0 lg:bg-[url('/assets/destination/background-destination-desktop.jpg')]">
       <div className="flex gap-[18px] pt-[88px] font-barlow font-normal text-base/[19px] tracking-[2.7px] uppercase md:text-[20px] md:leading-[24px] md:self-start md:pt-[136px] lg:pt-[212px] lg:pl-[166px] lg:text-[28px] lg:leading[34px] lg:tracking-[4.725px]">
         <span className="text-white/[0.25] ">01</span>
         <h2 className="inline-block">Pick your destination</h2>

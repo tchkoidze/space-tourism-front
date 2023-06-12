@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <div className="flex flex-col items-center gap-[81px] h-[100%] bg-[url('./assets/home/background-home-mobile.jpg')] bg-no-repeat bg-cover md:bg-[url('./assets/home/background-home-tablet.jpg')] lg:bg-[url('./assets/home/background-home-desktop.jpg')] lg:flex-row lg:px-[165px] lg:justify-between">
+    <div className="flex flex-col items-center gap-[81px] min-h-full bg-[url('./assets/home/background-home-mobile.jpg')] bg-no-repeat bg-cover md:bg-[url('./assets/home/background-home-tablet.jpg')] lg:bg-[url('./assets/home/background-home-desktop.jpg')] lg:flex-row lg:px-[165px] lg:justify-between">
       <div className="flex flex-col gap-4 justify-center pt-[112px] px-6 md:px-0 md:pt-[202px] lg:w-[40%] lg:pt-0">
         <h2 className="text-light-blue text-center font-barlow font-normal text-base/[19px] tracking-[2.7px] md:text-xl/[24px] lg:tracking-[3.375px] lg:text-left">
           SO, YOU WANT TO TRAVEL TO

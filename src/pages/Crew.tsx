@@ -32,7 +32,7 @@ function Crew() {
   }, []);
   console.log(crewMember);
   return (
-    <div className="h-[100%] bg-[url('./assets/crew/background-crew-mobile.jpg')] bg-no-repeat bg-cover px-[24px] text-white md:bg-[url('./assets/crew/background-crew-tablet.jpg')] lg:bg-[url('./assets/crew/background-crew-desktop.jpg')] lg:pl-[166px] lg:pr-[137px]">
+    <div className="min-h-full bg-[url('./assets/crew/background-crew-mobile.jpg')] bg-no-repeat bg-cover px-[24px] text-white md:bg-[url('./assets/crew/background-crew-tablet.jpg')] lg:bg-[url('./assets/crew/background-crew-desktop.jpg')] lg:pl-[166px] lg:pr-[137px]">
       <div className="flex gap-[18px] justify-center  pt-[88px] font-barlow font-normal text-base/[19px] tracking-[2.7px] uppercase md:pt-[136px] md:justify-start md:text-xl/[24px] md:tracking-[3.75px] lg:hidden">
         <span className="text-white/[0.25] ">02</span>
         <h2 className="inline-block">Pick your destination</h2>

@@ -30,7 +30,7 @@ function Technology() {
   }, []);
   console.log(tech);
   return (
-    <div className="h-[100%] bg-[url('./assets/technology/background-technology-mobile.jpg')] bg-no-repeat bg-cover text-white md:bg-[url('./assets/technology/background-technology-tablet.jpg')]">
+    <div className="min-h-full bg-[url('./assets/technology/background-technology-mobile.jpg')] bg-no-repeat bg-cover text-white md:bg-[url('./assets/technology/background-technology-tablet.jpg')]">
       <div className="flex gap-[18px] justify-center  pt-[88px] font-barlow font-normal text-base/[19px] tracking-[2.7px] md:justify-start md:pt-[136px] md:ml-[39px] md:text-xl/[24px] md:tracking-[3.75px] md:pt[136px] lg:pt-[212px] lg:text-[28px] lg:leading-[34px] lg:ml-[166px] lg:mb-[26px]">
         <span className="text-white/[0.25] ">03</span>
         <h2 className="inline-block">SPACE LAUNCH 101</h2>

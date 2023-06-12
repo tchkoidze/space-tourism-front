@@ -17,6 +17,7 @@ function Destination() {
   const [destinations, setDestinations] = useState<Destination[] | null>([]);
 
   const [destination, setDestination] = useState<Destination[] | null>([]);
+  /*const [location, setLocation] = useState("Moon");*/
 
   useEffect(() => {
     const getDestinationsdata = async () => {
@@ -36,8 +37,8 @@ function Destination() {
   console.log(destination);
   //console.log(destination?.images.webp);
   return (
-    <div className="flex flex-col items-center h-[100%] bg-[url('./assets/destination/background-destination-mobile.jpg')] bg-no-repeat bg-cover text-white px-[24px] md:bg-[url('./assets/destination/background-destination-tablet.jpg')] md:px-[39px] lg:px-0">
-      <div className="flex gap-[18px] pt-[88px] font-barlow font-normal text-base/[19px] tracking-[2.7px] uppercase md:text-[20px] md:leading-[24px] md:self-start lg:pt-[212px] lg:pl-[166px] lg:text-[28px] lg:leading[34px] lg:tracking-[4.725px]">
+    <div className="flex flex-col items-center h-[100%] bg-[url('./assets/destination/background-destination-mobile.jpg')] bg-no-repeat bg-cover text-white px-[24px] md:bg-[url('./assets/destination/background-destination-tablet.jpg')] md:px-[39px] lg:px-0 lg:bg-[url('./assets/destination/background-destination-desktop.jpg')]">
+      <div className="flex gap-[18px] pt-[88px] font-barlow font-normal text-base/[19px] tracking-[2.7px] uppercase md:text-[20px] md:leading-[24px] md:self-start md:pt-[136px] lg:pt-[212px] lg:pl-[166px] lg:text-[28px] lg:leading[34px] lg:tracking-[4.725px]">
         <span className="text-white/[0.25] ">01</span>
         <h2 className="inline-block">Pick your destination</h2>
       </div>
@@ -63,19 +64,31 @@ function Destination() {
           <div className="flex gap-4 justify-center md:gap-[36px] lg:justify-start">
             {destinations?.map((d) => {
               return (
-                <button
-                  className="font-barlow font-normal text-[14px] leading--17px] tracking-[2.36px] uppercase md:text-[16px] md:leading-[19px] md:tracking-[2.7px] "
-                  key={d.name}
-                  onClick={() => {
-                    const newDestination = [...destinations].filter(
-                      (name) => name.name === d.name
-                    );
-                    setDestination(newDestination);
-                    console.log(newDestination);
-                  }}
-                >
-                  {d.name}
-                </button>
+                <div key={d.name}>
+                  <button
+                    className="font-barlow font-normal text-[14px] leading--17px] tracking-[2.36px] uppercase md:text-[16px] md:leading-[19px] md:tracking-[2.7px] "
+                    onClick={() => {
+                      const newDestination = [...destinations].filter(
+                        (name) => name.name === d.name
+                      );
+                      setDestination(newDestination);
+
+                      console.log(45);
+                    }}
+                  >
+                    {d.name}
+                  </button>
+                  <div
+                    className=" w-[100%] h-[3px] mt-[12px] "
+                    style={
+                      destination &&
+                      destination.length > 0 &&
+                      d.name === destination[0].name
+                        ? { backgroundColor: "#fff" }
+                        : undefined
+                    }
+                  ></div>
+                </div>
               );
             })}
           </div>

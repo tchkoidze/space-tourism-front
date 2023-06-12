@@ -61,15 +61,21 @@ function Crew() {
               /*backgroundSize: "456px 572px",*/
               backgroundPosition: "top center",
             }}
-            className="hidden md:bg-[length:456px_572px] md:w-[63.4%] md:h-[532px] md:flex md:self-center lg:bg-[length:568px_702px] lg:w-[568px]"
+            className="hidden md:bg-[length:456px_572px] md:w-[63.4%] md:h-[532px] md:flex md:self-center lg:bg-[length:568px_702px] lg:w-[50%] lg:h-[702px]"
           ></div>
-          <div className="border-t border-[#383B4B] md:flex md:flex-col-reverse md:border-none ">
-            <div className="flex gap-4 justify-center my-[32px] md:my-[40px] lg:my-0 lg:mt-[120px] lg:justify-start lg:gap-[24px]">
+          <div className="border-t border-[#383B4B] md:flex md:flex-col-reverse md:border-none lg:w-[43%]">
+            <div className="flex gap-4 justify-center my-[32px] md:my-[40px] lg:my-0 lg:mt-[120px] lg:mb-[94px] lg:justify-start lg:gap-[24px]">
               {crew?.map((c) => {
                 return (
                   <button
                     key={c.name}
-                    className="w-[10px] h-[10px] rounded-[50%] bg-white"
+                    className={`w-[10px] h-[10px] rounded-[50%] bg-white/[0.17] ${
+                      crewMember &&
+                      crewMember.length > 0 &&
+                      c.name === crewMember[0].name
+                        ? "bg-white/[1]"
+                        : undefined
+                    }`}
                     onClick={() => {
                       const newMember = crew.filter((n) => n.name === c.name);
                       setCrewMember(newMember);

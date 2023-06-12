@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+const URL = import.meta.env.VITE_BACK_URL;
+
 interface Technology {
   _id?: string;
   name: string;
@@ -37,13 +39,14 @@ function Technology() {
         <div className="lg:flex lg:flex-row-reverse lg:gap-[130px] items-center">
           <img
             className="w-[100%] h-[170px]  mt-[32px] mb-[34px] md:mt-[60px] md:mb-[57px] md:h-[310px] lg:m-0 lg:hidden"
-            //src={`${BACK_URL}${tech[0].images["portrait"]}`}
-            src={tech[0].images.portrait}
+            src={`${URL}${tech[0].images["portrait"]}`}
+            //src={tech[0].images.portrait}
             alt=""
           />
           <img
             className="hidden lg:inline lg:w-[35.76%] lg:h-[527px]"
-            src={tech[0].images.portrait}
+            //src={tech[0].images.portrait}
+            src={`${URL}${tech[0].images["portrait"]}`}
             alt=""
           />
           <div className="lg:flex lg:flex-row lg:ml-[165px] gap-[80px]">

@@ -8,7 +8,7 @@ interface Crew {
   bio: string;
 }
 
-const url = import.meta.env.VITE_BACK_URL;
+const url = import.meta.env.BACK_URL;
 
 function Crew() {
   const [crew, setCrew] = useState<Crew[] | null>(null);

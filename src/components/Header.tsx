@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../svg/Logo";
 import MenuIcon from "../svg/MenuIcon";
 import { useState } from "react";
@@ -8,6 +8,8 @@ function Header(props: {
   showMenu: boolean;
 }) {
   const [location, setLocation] = useState("/");
+  const locations = useLocation();
+  console.log(locations.pathname);
   return (
     <>
       <header className="flex items-center justify-between px-6 absolute top-6 w-[100%] md:pl-[39px] md:pr-0 md:top-0 lg:pl-[55px]">
@@ -17,16 +19,20 @@ function Header(props: {
           <ul className="flex gap-[37px] font-barlow font-normal text-[14px] leading-[17px] tracking-[2.362px] text-white uppercase lg:gap-[50px] lg:text-[16px] lg:leading-[19px]">
             <li className="flex flex-col justify-center">
               <Link
-                to={"/"}
+                to={"/home"}
                 className="flex mt-auto"
                 onClick={() => setLocation("/")}
               >
                 <span className="hidden mr-[11px] lg:block">00</span> HOME
               </Link>
               <div
-                style={location === "/" ? { borderColor: "#fff" } : undefined}
+                /*style={location === "/" ? { borderColor: "#fff" } : undefined}*/
+                style={
+                  locations.pathname.startsWith("/home")
+                    ? { borderColor: "#fff" }
+                    : undefined
+                }
                 className="w-[100%] h-[3px] border-b-[3px] border-transparent mt-auto"
-                
               ></div>
             </li>
             <li className="flex flex-col justify-center  ">
@@ -39,8 +45,13 @@ function Header(props: {
                 destination
               </Link>
               <div
-                style={
+                /*style={
                   location === "destination"
+                    ? { borderColor: "#fff" }
+                    : undefined
+                }*/
+                style={
+                  locations.pathname.startsWith("/destination")
                     ? { borderColor: "#fff" }
                     : undefined
                 }
@@ -56,8 +67,13 @@ function Header(props: {
                 <span className="hidden mr-[11px] lg:block">02</span> crew
               </Link>
               <div
-                style={
+                /*style={
                   location === "crew" ? { borderColor: "#fff" } : undefined
+                }*/
+                style={
+                  locations.pathname.startsWith("/crew")
+                    ? { borderColor: "#fff" }
+                    : undefined
                 }
                 className="w-[100%] h-[3px] border-b-[3px] border-transparent mt-auto"
               ></div>
@@ -72,8 +88,13 @@ function Header(props: {
               </Link>
               <div
                 className="w-[100%] h-[3px] border-b-[3px] border-transparent mt-auto"
-                style={
+                /*style={
                   location === "technology"
+                    ? { borderColor: "#fff" }
+                    : undefined
+                }*/
+                style={
+                  locations.pathname.startsWith("/technology")
                     ? { borderColor: "#fff" }
                     : undefined
                 }

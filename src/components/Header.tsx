@@ -8,6 +8,7 @@ function Header(props: {
   showMenu: boolean;
 }) {
   const [location, setLocation] = useState("/");
+  console.log(location);
   const locations = useLocation();
   console.log(locations.pathname);
   return (

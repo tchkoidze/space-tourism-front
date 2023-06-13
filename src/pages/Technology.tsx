@@ -37,7 +37,7 @@ function Technology() {
         <div className="lg:flex lg:flex-row-reverse lg:gap-[130px] items-center">
           <img
             className="w-[100%] h-[170px]  mt-[32px] mb-[34px] md:mt-[60px] md:mb-[57px] md:h-[310px] lg:m-0 lg:hidden"
-            src={`${BASE_URL}${tech[0].images["portrait"]}`}
+            src={`${BASE_URL}${tech[0].images.landscape}`}
             //src={tech[0].images.portrait}
             alt=""
           />

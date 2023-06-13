@@ -16,9 +16,7 @@ function Technology() {
 
   useEffect(() => {
     const getTechnologyData = async () => {
-      const response = await axios.get(
-        "https://space-tours.herokuapp.com/api/technology"
-      );
+      const response = await axios.get(`${BASE_URL}/api/technology`);
       setTechs(response.data);
       console.log(response.data);
       const techData = await response.data.filter(

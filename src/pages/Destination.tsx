@@ -21,9 +21,7 @@ function Destination() {
 
   useEffect(() => {
     const getDestinationsdata = async () => {
-      const response = await axios.get(
-        "https://space-tours.herokuapp.com/api/destination"
-      );
+      const response = await axios.get(`${BASE_URL}/api/destination`);
       setDestinations(response.data);
       console.log(destinations);
       const destinationData = await response.data.filter(

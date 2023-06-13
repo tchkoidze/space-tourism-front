@@ -16,9 +16,7 @@ function Crew() {
 
   useEffect(() => {
     const getCrewData = async () => {
-      const response = await axios.get(
-        "https://space-tours.herokuapp.com/api/crew"
-      );
+      const response = await axios.get(`${BASE_URL}/api/crew`);
       setCrew(response.data);
       console.log(response.data);
 

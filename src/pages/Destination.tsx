@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
 
-const BACK_URL = import.meta.env.BACK_URL;
+const BASE_URL = import.meta.env.VITE_BACK_URL;
 
 interface Destination {
   description: string;
@@ -47,13 +47,13 @@ function Destination() {
           <>
             <img
               /*src={`${${process.env.Back_url}}${destination[0].images.png}`}*/
-              src={`${BACK_URL}${destination[0].images["png"]}`}
+              src={`${BASE_URL}${destination[0].images["png"]}`}
               alt="moon"
               className="w-[170px] h-[170px] mt-[32px] mb-[26px] mx-auto md:w-[300px] md:h-[300px] md:my-[55px] lg:hidden"
             />
             <img
               /*src={`${${process.env.Back_url}}${destination[0].images.png}`}*/
-              src={`${BACK_URL}${destination[0].images["webp"]}`}
+              src={`${BASE_URL}${destination[0].images["webp"]}`}
               alt="moon"
               className="hidden lg:inline lg:w-[445px] lg:h-[445px]"
             />

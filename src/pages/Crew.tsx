@@ -8,7 +8,7 @@ interface Crew {
   bio: string;
 }
 
-const url = import.meta.env.BACK_URL;
+const BASE_URL = import.meta.env.VITE_BACK_URL;
 
 function Crew() {
   const [crew, setCrew] = useState<Crew[] | null>(null);
@@ -51,12 +51,12 @@ function Crew() {
           <img
             className="w-[177px] h-[222px] mx-auto mt-[32px] md:hidden"
             //src={crewMember[0].images.png}
-            src={`${url}${crewMember[0].images["png"]}`}
+            src={`${BASE_URL}${crewMember[0].images["png"]}`}
             alt=""
           />
           <div
             style={{
-              backgroundImage: `url(${url}${crewMember[0].images["webp"]}`,
+              backgroundImage: `url(${BASE_URL}${crewMember[0].images["webp"]}`,
               backgroundRepeat: "no-repeat",
               /*backgroundSize: "456px 572px",*/
               backgroundPosition: "top center",
